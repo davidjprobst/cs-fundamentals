@@ -1,0 +1,66 @@
+### Exercises
+
+> What is the main difference between a stack and a queue?
+
+The order in which new items are added to the data structure. In stacks new items are added to the first position (FIFO). In queues new items are added to the last position (LIFO).
+
+> What are the similarities between stacks and queues?
+
+Items are taken out from the first position and items are stored in a prioritized order. 
+
+> Imagine you are an engineer tasked with implementing the UNDO and REDO options in a word processor such as Microsoft Word. Which data structure would you use for each option and why?
+
+Stack data structure. When you undo you want to recall the last action taken, so when you store the last action you want to put it in the first position so you can `pop` it out.
+
+
+
+###Programming Questions
+
+> Given a string, reverse it using a stack. For example, the string "Bloc!" should be converted to "!colB".
+
+Use stack data structure to pop data from the original string in reverse order and push it into a new string.
+
+FUNCTION REVERSE(original)
+  INIT a new stack
+  FOR each character in original
+    CALL stack.push WITH character
+  END FOR
+  INIT reversed to empty string
+  WHILE stack is not empty
+    CALL stack.pop RETURNING character
+    APPEND character to reversed
+  END WHILE
+  RETURN reversed
+END FUNCTION
+
+
+> Implement the delete functionality of a stack using one queue. Make a FIFO data structure mirror the functionality of a LIFO data structure.
+
+Reverse the data structure so the first element is in the last position. Delete the last element in the reversed structure.
+
+CLASS Stack
+ FUNCTION pop(queue)
+   FOR each element in queue
+      CALL queue.push WITH element
+   END FOR
+   SET the element at the queue position index to temp
+   DECREMENT the queue position index by 1
+   RETURN temp
+ END FUNCTION
+END CLASS
+
+
+> Fill in the methods for the following Queue class so that it will work as expected (FIFO).
+
+CLASS QUEUE
+ FUNCTION enqueue(element)
+   APPEND element to the end of the list
+ END FUNCTION
+
+ FUNCTION dequeue
+   SET temp to the first element
+   REMOVE FIRST element of list from list
+   RETURN temp
+ END FUNCTION
+END CLASS
+
