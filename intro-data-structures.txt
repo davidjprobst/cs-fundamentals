@@ -1,0 +1,67 @@
+A line of people at an amusement park ride.
+
+The line is composed of members, represented as strings.
+There is a front to the line, as well as a back.
+When someone enters the line, place them at the end.
+People may leave the line whenever they see fit, and those behind them take their place.
+Given the above real-world information, use an array data structure to code the following solution.
+
+
+
+> a) Use an array input: ["Vivian", "Ava", "Josh", "Patrick", "Mike"]
+
+let line = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+> b) Insert a new person, "Mary" at the end of the line. In other words, you should insert Mary after Mike.
+
+line.push("Mary");
+
+> c) Find a person in line named "Josh." This function should return the position of 2 in the array, (recall that arrays are 0-based).
+
+function findJosh() {
+  if (line.includes("Josh")) {
+    return "Josh is standing in position " + line.indexOf("Josh");
+  } else {
+    return "Josh is not in line";
+  }
+}
+
+> d) Find a person in line named "Emily." What should your function return if it does not find the item in the array?
+
+function findEmily() {
+  if (line.includes("Emily")) {
+    return "Emily is standing in position " + line.indexOf("Emily");
+  } else {
+    return "Emily is not in line";
+  }
+}
+
+> e) What if Ava wants to allow a friend, "Melissa", to cut in line in front of her? How would you code this so Melissa appears before Ava?
+
+function letMelissaCut() {
+  if (line.includes("Ava")) {
+    const avaPosition = line.indexOf("Ava");
+    line.splice(avaPosition, 0 , "Melissa");
+  } else {
+    return "Ava is not in line. Melissa can't cut."
+  }
+}
+
+> f) If Patrick wants to leave the line, how would you delete him from the array?
+
+function removePatrick() {
+    if (line.includes("Patrick")) {
+    const patrickPosition = line.indexOf("Patrick");
+    line.splice(patrickPosition, 1);
+  } else {
+    return "Patrick is not in line"
+  }
+}
+
+> Provide another real-world example that you can model using a data structure.
+
+Managing product inventory at a retail store.
+
+> How would your data structure allow developers to access and manipulate the data?
+
+Items could be added when a new shipment of products arrive, removed when items are purchased, and look for items in the data structure to see if they are still available in the store.
