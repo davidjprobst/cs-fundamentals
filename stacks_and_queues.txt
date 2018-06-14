@@ -36,7 +36,11 @@ END FUNCTION
 
 > Implement the delete functionality of a stack using one queue. Make a FIFO data structure mirror the functionality of a LIFO data structure.
 
+To delete an item, take all of the elements in the queue one at a time and put them at the end of the queue, except for the last one which should be deleted and returned.
+
+
 Reverse the data structure so the first element is in the last position. Delete the last element in the reversed structure.
+
 
 CLASS Stack
  FUNCTION pop(queue)
