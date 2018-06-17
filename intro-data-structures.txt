@@ -28,33 +28,33 @@ function findJosh() {
 
 > d) Find a person in line named "Emily." What should your function return if it does not find the item in the array?
 
-function findEmily() {
-  if (line.includes("Emily")) {
-    return "Emily is standing in position " + line.indexOf("Emily");
+function find(name) {
+  if (line.includes(name)) {
+    return name + " is standing in position " + line.indexOf(name);
   } else {
-    return "Emily is not in line";
+    return name + " is not in line";
   }
 }
 
 > e) What if Ava wants to allow a friend, "Melissa", to cut in line in front of her? How would you code this so Melissa appears before Ava?
 
-function letMelissaCut() {
-  if (line.includes("Ava")) {
-    const avaPosition = line.indexOf("Ava");
-    line.splice(avaPosition, 0 , "Melissa");
+function cut(cutName, holdName) {
+  if (line.includes(holdName)) {
+    const holdNamePosition = line.indexOf(holdName);
+    line.splice(holdNamePosition, 0 , cutName);
   } else {
-    return "Ava is not in line. Melissa can't cut."
+    return holdName + " is not in line.  " +  cutName + " can't cut."
   }
 }
 
 > f) If Patrick wants to leave the line, how would you delete him from the array?
 
-function removePatrick() {
-    if (line.includes("Patrick")) {
-    const patrickPosition = line.indexOf("Patrick");
-    line.splice(patrickPosition, 1);
+function remove(name) {
+    if (line.includes(name)) {
+    const namePosition = line.indexOf(name);
+    line.splice(namePosition, 1);
   } else {
-    return "Patrick is not in line"
+    return name + " is not in line"
   }
 }
 
