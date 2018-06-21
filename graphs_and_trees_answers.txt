@@ -1,0 +1,125 @@
+###QUESTIONS
+
+
+1. What is a binary tree and what makes it unique to other trees?
+
+A binary tree is a tree in which each Node points to no more than two children, a left child and a right child. They are unique because the number of child nodes is restricted, and they are sorted by comparing inserted values to the existing values in the tree to determine its location.
+
+
+
+2. What is a heuristic?
+
+Heuristics are guesses software engineers use in algorithms to solve complex problems quickly. These guesses sacrifice some accuracy to get to an answer that is "good enough" more efficiently.
+
+
+
+3. What is another problem besides the shortest-path problem that requires the use of heuristics?
+
+Searching names in Facebook needs heuristics. Confining the search to only account that have mutual friends, live near you, or have similar interests as you rather than searching every person in the world would speed up the results without a high chance that you don't find who you are looking for.
+
+
+4. What is the difference between a depth-first search and a breadth-first search?
+
+DFS traverses all the way down the branch of a tree/graph from the root first before backtracking. BFS searches the neighboring nodes first before moving on to the next level in the tree/graph. 
+
+
+5. Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+
+A graph that does not have a connection with a start and end, does not form a loop, and does not assign a cost of travel between nodes. 
+
+
+6. What kind of graph is a binary search tree?
+
+A binary search tree is directed, a-cyclic, and unweighted
+
+
+
+
+
+###PROGRAMMING QUESTIONS
+
+Given a Binary Search Tree and a value, write a function that checks to see whether the value exists within the tree.
+
+function isPresent(data) {
+    let current = this.root;
+    while (current) {
+        if (data === current.data) {
+            return true;
+        }
+        if (data < current.data) {
+            current = current.left;
+        } else {
+            current = current.right;
+        }
+    }
+    return false;
+}
+
+
+
+
+
+Given a Binary Search Tree and two nodes, n1 and n2, write a function that finds the distance between the two nodes.
+
+
+
+var commonAncestor = null;
+var distance = 0;
+
+
+function findCommonAncestor(root, leftNode, rightNode) {
+   if (current < rightNode && current < leftNode) {
+        commonAncestor = findCommonAncestor(current.right, leftNode, rightNode)
+   } else if (current > leftNode && current > rightNode) {
+        commonAncestor = findCommonAncestor(current.left, leftNode, rightNode)
+   } else if (current >= leftNode && current <= rightNode) 
+        commonAncestor = current;
+   }
+}
+
+function leftDistance(current, leftNode) {
+   if (leftNode === current) {
+      return;
+   } else {
+      distance += 1;
+      leftNodeDistace(current.left, leftNode)
+   }
+}
+
+function rightDistance(current, rightNode) {
+   if (rightNode === current) {
+      return;
+   } else {
+      distance += 1;
+      rightNodeDistace(current.right, rightNode)
+   }
+}
+
+
+function findDistanceBetween(n1, n2) {
+   if (n1 === n2) {
+      distance = 0;
+   }
+
+   let current = this.root;
+   let leftNode = null;
+   var rightNode = null
+  
+   if (n1 < n2) {
+       leftNode = n1;
+       rightNode = n2;
+   } else {
+       leftNode = n2;
+       rightNode = n1;  
+   }
+
+   findCommonAncestor(current, leftNode, rightNode);
+   leftNodeDistance(current, leftNode);
+   rightNodeDistance(current, rightNode);
+   
+   return distance;
+
+}
+   
+   
+
