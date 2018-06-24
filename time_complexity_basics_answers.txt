@@ -1,0 +1,47 @@
+1. What is time complexity and what is its relation to algorithms?
+
+> Time complexity is a function that estimates how long it will take for a program to execute. It is related to algorithms because it can help illustrate how efficient an algorithm is. You can determine time complexity of an algorithm by adding how many instructions and algorithm will run and simplifying it to its largest term.
+
+
+2. What is runtime?
+
+> Runtime is the physical amount of time it takes for an algorithm to execute. It is also synonymous with time complexity. 
+
+
+3. How is the runtime of an algorithm calculated?
+
+> Runtime is calculated by adding up the instructions an algorithm will execute as a function of the size of its input. Then simplifying the resulting expression into its largest term. The runtime is represented in big 0 notation with the calculated largest term inside parenthesis.
+
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+
+> Constant Growth Rate O(1)
+> Logarithmic Growth Rate O(log n)
+> Linear Growth Rate O(n)
+> Log Linear Growth Rate O(n log n)
+> Quadratic Growth Rate O(n^2)
+> Exponential Growth Rate O(2^n)
+
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+
+> Sorting a deck of cards by suit and number is a Log-Linear Growth Rate
+
+
+6. Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+
+> Linear Time Complexity 
+
+
+7. Determine the time complexity of the following snippet of code.
+
+> Quadratic Time Complexity
+
+
+8. Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
+
+> Exponential Time Complexity 
+
+9. Out of the code snippets you just saw, which is the most time efficient?
+
+> The first snippet (question 6) is the most time efficient
