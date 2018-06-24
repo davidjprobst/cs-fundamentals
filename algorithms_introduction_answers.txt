@@ -1,0 +1,53 @@
+1. Using proper pseudo-code, describe the following primitive algorithms:
+
+> Making Coffee
+
+Define how much coffee is desired
+Put coffee filter in coffee machine
+Measure coffee grounds
+Put coffee grounds in coffee filter
+Measure water
+Pour water into coffee machine
+Turn on coffee machine
+Set coffee machine to the desired setting
+Start coffee machine
+
+> Washing dishes
+
+Gather dishes
+FOR each dish
+   Put dish soap on dish
+   Scrub with a sponge until clean
+   Rinse dish until soap is gone
+   Place on trying rack
+END FOR
+
+> Cleaning the litter box
+
+IF litter box has cat waste
+   Get trash bag
+   Open trash bag
+   FOR each piece of cat waste
+      Scoop the cat waste
+      Dump cat waste in garbage bag
+   END FOR
+   Throw garbage bag in dumpster
+END IF
+IF litter box has no cat waste
+   Do nothing
+END IF
+
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+> Ford's assembly line - created smaller algorithms within the larger algorithm of building a car to move the process along faster. Each person performing a the same task on a new car made the car building process more efficient
+
+> Uber's driver/rider matching algorithm - made it possible for riders to get cars as quickly as possible by matching them to closest driver. More efficient than the previous system of walking to a corner and waving for taxi's
+
+> Amazon's warehouse algorithm - matching the shoppers address to the closest warehouse in which the ordered item is in stock, making delivery times faster and shipping costs cheaper
+
+
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+> Efficient algorithms find a solution to a problem as quickly as possible using as little resources as possible. Inefficient algorithms may have unnecessary or suboptimal steps/code that slows them down or wastes resources.
